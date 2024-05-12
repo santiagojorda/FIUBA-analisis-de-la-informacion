@@ -5,4 +5,4 @@
 - 💻 [Mi Drive](https://drive.google.com/drive/folders/1PX4bIF7G4DxuRhuGF8oMwLjbFAJvXnjX?usp=sharing)
 - 💻 [EGON v2](https://egon.io/app-v2/)
 - 💻 [Draw.io](https://app.diagrams.net/)
-
+- 📽️ [Clases grabadas](https://youtube.com/@nacionbachi?si=wnTEvWEbOnhK-DI8)
