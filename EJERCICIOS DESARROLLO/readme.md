@@ -70,19 +70,18 @@ Incompleto.
 
 No era necesario "particionar" el modelo.
 
-1) Se modelan incorrectamente las asociaciones. Como se explicó varias veces en clase (y en el vídeo) las asociaciones no son flechas. Una asociación que termina con una punta de flecha tiene un significado muy preciso en UML, que tiene que ver con la implementación y no con el modelado conceptual. Adicionalmente, faltan algunos nombres de asociaciones (C)
+1) ✅ Se modelan incorrectamente las asociaciones. Como se explicó varias veces en clase (y en el vídeo) las asociaciones no son flechas. Una asociación que termina con una punta de flecha tiene un significado muy preciso en UML, que tiene que ver con la implementación y no con el modelado conceptual. Adicionalmente, faltan algunos nombres de asociaciones (C)
 
-2) No se resuelve el requisito de identificar en qué aulas, días y horarios se da un curso en un cuatrimestre determinado. Si bien hay dos atributos en curso, día y horario, no se puede determinar la correlación entre los días y los horarios. Adicionalmente, no se puede saber, para cada día-horario, qué aulas tocan, ya que todo el curso está asociado a 1..* sedes, y cada sede tiene 0..* aulas. (MC).
+2) ✅ No se resuelve el requisito de identificar en qué aulas, días y horarios se da un curso en un cuatrimestre determinado. Si bien hay dos atributos en curso, día y horario, no se puede determinar la correlación entre los días y los horarios. Adicionalmente, no se puede saber, para cada día-horario, qué aulas tocan, ya que todo el curso está asociado a 1..* sedes, y cada sede tiene 0..* aulas. (MC).
 
 3) Se modelan incorrectamente las materias aprobadas y las no aprobadas. Por la aclaración, se supone que es una estructura de generalización/especialización, pero la notación es incorrecta. Dejando de lado la notación, no es posible que las materias aprobadas sean una especialización de materia: no es así que funcionan estas estructuras. Para cada instancia del "supertipo" habrá siempre una instancia de uno de los "subtipos" En este caso, se entiende que se quiso modelar que para una instancia de materia hay muchas instancias de materia aprobada.Esto no funciona así. Por favor, consultar [Larman]
 Adicionalmente, no se sabe qué alumnos aprobaron (MC)
 
+4) ✅ Se modela incorrectamente la correlatividad entre materias. La asociación debe ser 0..* a 0..*. Tal como está, es infinita (esto se explicó en clase y en el vídeo correspondiente)
 
-4) Se modela incorrectamente la correlatividad entre materias. La asociación debe ser 0..* a 0..*. Tal como está, es infinita (esto se explicó en clase y en el vídeo correspondiente)
+5) ✅ Se modelan incorrectamente las actas, ídem punto anterior. Adicionalmente, no se sabe a qué alumnos corresponden las notas (MC)
 
-5) Se modelan incorrectamente las actas, ídem punto anterior. Adicionalmente, no se sabe a qué alumnos corresponden las notas (MC)
-
-6) El recargo por pago tardío se debe aplicar a la factura, no a la cuota.
+6) ✅ El recargo por pago tardío se debe aplicar a la factura, no a la cuota.
 ~~~
 
 ## Ejercicio 5
