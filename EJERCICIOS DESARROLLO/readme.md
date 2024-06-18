@@ -86,7 +86,129 @@ Adicionalmente, no se sabe qué alumnos aprobaron (MC)
 
 ## Ejercicio 5
 ~~~
+a) Actualización de cuotas
+El objetivo de la historia no es adecuado (siempre vamos querer actualizar algo para mantenerlo actualizado...Hay que tratar de determinar cuál es el valor para el usuario)
 
+Se debe ser más específico en la formulación de los escenarios. Por ejemplo:
+
+"Dado que hay una cuota para el periodo 2024/04 con un arancel de $XXX
+
+Cuando se modifica el arancel de la cuota a $YYY
+
+Entonces se registra el nuevo arancel de la cuota como $YYY"
+
+"Dado que hay una cuota para el periodo 2024/04 y que ya se han generado las facturas para dicho periodo
+Cuando se quiere modificar el arancel de la cuota
+Entonces se informa que no es posible modificar el arancel de una cuota ya facturada a los alumnos"
+
+
+b) Generación de facturas
+La historia plantea la generación de facturas de a un alumno por vez. Este es un proceso por lotes.
+
+No se explica cómo se calcula el recargo.
+
+c) Envío de facturas
+Forma parte de la emisión.
+
+d) Recargos
+Se incluye -correctamente- en la historia de generación de la factura (aunque no se indica claramente cómo es el cálculo del recargo) Pero también se incluye en la historia de recepción de las transacciones.
+
+e) Regularidad
+"Dado una administrador de cobranzas" no es un contexto.
+No se indica que información contiene la notificación.
+Hay una historia para la reincorporación, pero se habla en los CA de "iniciar el trámite de reincorporación" pero no se describe cómo es ese trámite.
+
+f) Envío de transacciones de pago
+Hay varias validaciones que habría que hacer y que no están reflejadas. Por ejemplo, que las transacciones correspondan a alumnos/facturas válidas; que correspondan a facturas que estaban impagas hasta el momento; etc.
+
+Se aplica un recargo del 5% en la siguiente factura...¿Cómo se hace si la factura aún no se emitió? Por otro lado, el recargo se indica en la historia correspondiente a la generación de la factura. ¿Se aplica dos veces?
 ~~~
 
 ## Ejercicio 6
+~~~
+a) General
+Buen layout. Se emplearon datos reales.
+
+b) Definición y actualización de cuotas
+Se podría haber arrancado con una lista de cuotas para que el usuario elija cuál modificar. Bien los controles. Faltaría la opción de crear una cuota (es lo que sucede a principios de año)
+
+c) Generación y envío de facturas
+Falta la generación y envío de las facturas.
+Los alumnos reciben notificación cuando hay una nueva factura disponible.
+
+d) Transacciones Tangerine
+Hay una consulta de las transacciones.
+
+e) Regularidad
+Hay una pantalla para consultar cuáles alumnos pierden la regularidad.
+
+f) Recargos
+Se muestra en las facturas.
+
+
+Ej.4: MDD
+
+Hay varios temas que no están bien.
+a) Factura no puede ser asociativo si tiene identificador propio.
+
+b) Historia académica no tiene atributos. No puede haber objetos sin atributos.
+
+c) Acta no puede ser asociativo entre curso y docente. Cada curso tiene varios docentes. Por consiguiente, para un mismo curso habrá tantas actas como docentes haya asignados.
+
+E5: HDU
+
+1) Actualización de cuotas: replantear el propósito. No se puede justificar la actualización de algo para que esté actualizado.
+
+"Dado un administrador..." no es un estado del sistema.
+
+2) Se debe ser más preciso en los criterios, en general.
+
+3) Falta la generación de las facturas. No se sabe de dónde salen.
+~~~
+
+
+## Ejercicio 7
+~~~
+"en el diseño de base de datos relacional debería haber una tabla para cada teléfono (alumno, sede y docentes) y no una cadena como lo incluí en el trabajo entregado."
+
+a) En tabla_factura falta la FK a tabla_cuota.
+
+b) No hay manera de saber a qué alumno corresponde una factura (falta la FK)
+
+c) Se plantean varias relaciones muchos a muchos entre dos tablas (no es posible en una BDR)
+
+d) Se modela incorrectamente la relación entre las correlativas y las materias.
+
+e) Se arrastra el error de inscribir al alumno en un curso y no a un curso y a un cuatrimestre.
+
+f) Adicionalmente, hay una tabla_inscripción entre tabla_cuatrimestre y tabla_curso. No se entiende para qué sirve.
+
+
+Ejercicio 4: MDD
+
+a) Pago no puede ser OA, ya que las facturas primero se generan y luego se pagan. Tal como está, el pago existe siempre que exista la factura.
+
+b) Si el Acta es de cursada, no tiene sentido tener asociado un objeto con dos atributos, una de final y otra de cursada.
+
+c) Un Alumno debe poder inscribirse en un Curso de un Cuatrimestre (tal como está, no sabemos cuándo cursará la materia)
+
+d) No se normalizan los teléfonos.
+
+Ejercicio 5: HDU
+
+a) El "Dado" debe describir el estado del sistema, no las acciones o los eventos.
+~~~
+
+
+## Ejercicio 8
+~~~
+a) Buena elección de fuentes y colores base.
+
+b) Algunas pantallas podrían tener mejor diseño. Por ejemplo, Mis Facturas plantea botones. Hubiera sido mejor plantear una grilla y seleccionar desde ahí cuáles visualizar.
+
+c) Algo similar ocurre con el menú de Administración. ¿No se podría haber optado por un menú más tradicional, en la parte superior de la pantalla?
+
+
+Ejercicio 5: HDU
+"Dado que un empleado está en el sistema" no es una precondición válida.
+~~~
