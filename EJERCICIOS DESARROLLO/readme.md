@@ -2,15 +2,13 @@
 
 ## Ejercicio 1
 ~~~
-1) La estructura utilizada no son las esperadas para un trabajo universitario. No se justifica nada.
+1) No se incluyen datos del alumno, materia, año, ejercicio, etc. No hay formato.
 
-2) No se incluyen datos del alumno, materia, año, ejercicio, etc. No hay formato.
+2) No se identifican stakeholders negativos
 
-3) No se identifican stakeholders negativos
+3) Los desarrolladores y otros roles del equipo de construcción de la aplicación no corresopnden a la capa 1 sino a la de "Wider Envoronment", que es la 4ta.
 
-4) Los desarrolladores y otros roles del equipo de construcción de la aplicación no corresopnden a la capa 1 sino a la de "Wider Envoronment", que es la 4ta.
-
-5) Los alumnos y empleados administrativos no son beneficiarios funcionales sino usuarios del sistema.
+4) Los alumnos y empleados administrativos no son beneficiarios funcionales sino usuarios del sistema.
 ~~~
 
 
