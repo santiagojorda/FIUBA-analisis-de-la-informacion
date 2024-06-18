@@ -6,4 +6,5 @@
 - 💻 [EGON v2 (historias de dominio)](https://egon.io/app-v2/)
 - 💻 [Draw.io (graficos uml, historias y modelo de dominio, etc)](https://app.diagrams.net/)
 - 💻 [Balsamiq (Prototipos)](https://balsamiq.cloud/)
+- 💻 [Figma (Interfaz de usuario)](https://figma.com/)
 - 📽️ [Clases grabadas](https://youtube.com/playlist?list=PLjzhyXsU-ygwG2mWoOWQ2RqKfbjtbg_9-&si=gvbgORvzzrBk3O26)
